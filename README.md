@@ -1,5 +1,7 @@
 # SwiftyCSVStream
 
+A tiny library to manage CSV, built on top of CodableCSV(https://github.com/dehesa/CodableCSV).
+
 ## How to use
 ```.swift
 struct MyDataStructure: CodableWithHeader {
