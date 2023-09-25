@@ -32,7 +32,7 @@ public func writeCsv<T: CodableWithHeader>(filepath: String, data: [T], encoding
 public typealias CSV = ReadableCSVStream
 
 public class ReadableCSVStream<T: CodableWithHeader> {
-    private var processedCsv: [T] = []
+    public var processedCsv: [T] = []
     public init() {}
     public func read(path: String, encoding: String.Encoding = .utf8) -> CSVStream<T> {
         return CSVStream<T>().read(path: path, encoding: encoding)
@@ -40,7 +40,7 @@ public class ReadableCSVStream<T: CodableWithHeader> {
 }
 
 public class CSVStream<T: CodableWithHeader> {
-    private var processedCsv: [T]
+    public var processedCsv: [T]
     init(_ processedCsv: [T]) {
         self.processedCsv = processedCsv
     }
